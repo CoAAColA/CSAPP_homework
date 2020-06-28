@@ -5,7 +5,7 @@ int any_odd_one(unsigned x){
 }
 
 int any_odd_one_1(unsigned x){
-	return !~(x|x<<1); //assume that index shtart with 1
+	return !~(x|x<<1); //assume that index start with 1
 }
 
 int main(){
