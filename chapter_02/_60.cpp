@@ -5,8 +5,7 @@ typedef unsigned char *byte_pointer;
 
 unsigned replace_byte(unsigned x, int i, unsigned char b){
 	assert(i >= 0 && i < sizeof(x));
-	byte_pointer ptr = (byte_pointer) &x;
-	while(i--) ++ptr;
+	byte_pointer ptr = (byte_pointer) &x+i;
 	*ptr = b;
 	return x;
 }
