@@ -9,7 +9,7 @@ unsigned srl(unsigned x, int k){
 int sra(int x, int k){
 	int xsrl = (unsigned) x >> k;
 	int w = sizeof(int) << 3;
-	x < 0 && (xsrl = -1<<(w-k) | xsrl);
+	(x & 1<<(w-k-1)) && (xsrl = -1<<(w-k) | xsrl);
 	return xsrl;
 }
 
