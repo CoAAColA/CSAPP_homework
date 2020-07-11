@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 int A(int k){
-	int ret = -1;
-	return ret<<k;
+	return -1<<k;
 }
 
 int B(int j, int k){
-	int ret = -1;
-	ret <<= j;
 	return ((1<<k)-1)<<j;
 }
 
